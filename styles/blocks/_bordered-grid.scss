@@ -63,6 +63,7 @@
           }
         }
 
+
         &:nth-child(3n - 1) {
           @include full-vw-centered-line(bottom);
         }
