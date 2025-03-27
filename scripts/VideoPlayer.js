@@ -26,9 +26,11 @@ class VideoPlayer {
         this.panelElement.classList.remove(this.stateClasses.isActive)
     }
 
-    onVideoPause= () => {
-        this.videoElement.controls = false
-        this.panelElement.classList.add(this.stateClasses.isActive)
+    onVideoPause = () => {
+        if (!this.videoElement.seeking) { 
+            this.videoElement.controls = false;
+            this.panelElement.classList.add(this.stateClasses.isActive);
+        }
     }
 
     bindEvents() {
